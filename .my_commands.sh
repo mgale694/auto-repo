@@ -2,8 +2,8 @@
 
 function create() {
     source .env
-    python create.py $1
-    cd $FILEPATH$1
+    python $GITHUB_FILEPATH/auto-repo/create.py $1
+    cd $GITHUB_FILEPATH$1
     echo "# $1" >> README.md
     git init
     git add README.md

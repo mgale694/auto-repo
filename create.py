@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-path = os.getenv("FILEPATH")
+path = os.getenv("GITHUB_FILEPATH")
 github_token = os.getenv("GITHUB_TOKEN")
 
 def create():
