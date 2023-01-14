@@ -1,4 +1,4 @@
-# Atumatic GitHub Repository
+# Automatic GitHub Repository
 
 This project is designed to allow the user to automate the creation of their GitHub repositories
 via running a shell command.
@@ -23,10 +23,12 @@ touch .env
 Open the .env file and store your username, password, and file destination in the following format:
 
 ```zsh
-USERNAME="Username123"
-PASSWORD="Password123"
+GITHUB_USERNAME="Username"
+GITHUB_TOKEN="Token"
 FILEPATH="/path/to/your/project/"
 ```
+
+To generare github token go to https://github.com/settings/tokens and follow instructions.
 
 Add the following to your `.zshrc` in order to source commands whenever you terminal starts up.
 
