@@ -4,11 +4,12 @@ function create() {
     source .env
     python create.py $1
     cd $FILEPATH$1
-    # git init
-    # git remote add origin git@github.com:$USERNAME/$1.git
-    # touch README.md
-    # git add .
-    # git commit -m "Initial commit"
-    # git push -u origin master
-    # code .
+    echo "# $1" >> README.md
+    git init
+    git add README.md
+    git commit -m "Initial commit"
+    git branch -M main
+    git remote add origin https://github.com/$GITHUB_USERNAME/$1.git
+    git push -u origin main
+    code .
 }
