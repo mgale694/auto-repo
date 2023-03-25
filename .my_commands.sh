@@ -33,7 +33,74 @@ function create() {
         # Make requirements file
         touch requirements.txt
     fi
+    # Make README with repo as title
     echo "# $1" >> README.md
+
+    # Make a .gitignore file with basic configuration
+    echo "# Byte-compiled / optimized / DLL files
+    __pycache__/
+    *.py[cod]
+
+    # Unit test / coverage reports
+    htmlcov/
+    .tox/
+    .nox/
+    .coverage
+    .coverage.*
+    .cache
+    nosetests.xml
+    coverage.xml
+    *.cover
+    *.py,cover
+    .hypothesis/
+    .pytest_cache/
+    cover/
+
+    # Jupyter Notebook
+    .ipynb_checkpoints
+
+    # IPython
+    profile_default/
+    ipython_config.py
+
+    # pyenv
+    #   For a library or package, you might want to ignore these files since the code is
+    #   intended to run in multiple environments; otherwise, check them in:
+    .python-version
+
+    # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+    __pypackages__/
+
+    # Celery stuff
+    celerybeat-schedule
+    celerybeat.pid
+
+    # Environments
+    .env
+    .venv
+    env/
+    venv/
+    ENV/
+    env.bak/
+    venv.bak/
+
+    # mypy
+    .mypy_cache/
+    .dmypy.json
+    dmypy.json
+
+    # Pyre type checker
+    .pyre/
+
+    # pytype static type analyzer
+    .pytype/
+
+    # Cython debug symbols
+    cython_debug/
+
+    # Other
+    .DS_Store" >> .gitignore
+
     git init
     git add --all
     git commit -m "Initial commit"
