@@ -45,3 +45,9 @@ To run the script you need to type the following into your terminal:
 ```zsh
 create {name of your repository}
 ```
+
+To create a templated data science repository type the following command into your terminal:
+
+```zsh
+create {name of your repository} -ds
+```
